@@ -1,0 +1,56 @@
+# Task
+You annotate a short English text written by a beginning learner of English.
+Following the guidelines below, identify five kinds of units and count them.
+Do not list any items and do not calculate any ratios or scores. Return only the five counts.
+
+# Guidelines
+
+Formulaic non-sentences are not annotated: Hi!, The end.
+
+1. Word: a string of alphanumeric characters delimited by spaces or a space and a punctuation mark
+  Examples:
+  - I like my new school, class, teachers en friends: 9 words.
+  Exceptions:
+  - A wrongly joined or split word form is counted as the number of words in its correct form: eachother as two words, every body as one word.
+  - A contraction is counted as the number of words in its expanded form: isn’t as two words, can’t as one word.
+  - A proper noun is counted as one word: New Zealand as one word.
+  - A possessive marker is not counted as a separate word: my friend’s as two words.
+  - A placeholder standing in for redacted content (for example numb, used for a number) is counted as one word.
+
+
+2. Sentence: a group of words delimited by sentence-final punctuation marks (period, question mark, exclamation mark, quotation mark, or ellipsis)
+  Examples:
+  - <sentence>I was skiing and it was very good snow.</sentence> <sentence>Better than ever!</sentence>
+  Exceptions:
+  - A run-on sentence is reanalyzed as two or more sentences, separated at the place of the missing conjunction or missing/inappropriate punctuation: <sentence>That was everything what I wanted to tell about XX</sentence> <sentence>I really want to recommend this holiday to you.</sentence>
+
+3. T-unit: an independent clause together with its dependent clauses. A sentence fragment punctuated by the writer with no overt verb is also considered a T-unit.
+  Examples:
+  - <t-unit>My favorite subject is Music because I love making music</t-unit> and <t-unit>I also like Dutch</t-unit>.
+  - <t-unit>Better than ever</t-unit>.
+  Exceptions:
+  - T-units in a run-on sentence are annotated in accordance with how the run-on sentence is reanalyzed as sentences: <t-unit>That was everything what I wanted to tell about XX</t-unit> <t-unit>I really want to recommend this holiday to you</t-unit>.
+
+
+4. Clause: a structure with a subject and a finite verb. A sentence fragment punctuated by the writer with no overt verb is also considered a clause.
+  Examples:
+  - <clause>It would be a kind of present to my parents and sister to thank them</clause> for <clause>what they did for me</clause>.
+  - <clause>Better than ever!</clause>.
+
+
+5. Dependent clause: a finite adjective, adverbial, or nominal clause
+  Examples:
+  - It would be a kind of present to my parents and sister to thank them for <dependent-clause>what they did for me</dependent-clause>.
+
+
+# Output format
+Return exactly five lines, in this order, each with the capitalised header followed by the number of items found. The header labels below are only about how to report your answer; what counts as each unit is governed entirely by the guidelines above. No other text, before or after.
+
+WORDS: number of counted words (single integer)
+SENTENCES: number of counted sentences (single integer)
+T-UNITS: number of counted T-units (single integer)
+CLAUSES: number of counted clauses (single integer)
+DEPENDENT CLAUSES: number of counted dependent clauses (single integer)
+
+# Text
+[TEXT]

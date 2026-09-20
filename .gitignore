@@ -1,0 +1,17 @@
+# The learner corpus, the gold standard and everything derived from them are
+# not public and must never be committed.
+data/
+outputs/
+results/
+logs/
+*.docx
+*.xlsx
+
+.env
+.venv/
+__pycache__/
+.DS_Store
+
+# Working notes for AI coding agents
+CLAUDE.md
+AGENTS.md

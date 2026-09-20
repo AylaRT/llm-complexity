@@ -1,0 +1,5 @@
+numpy==2.4.6
+openai==2.41.1
+openpyxl==3.1.5
+python-docx==1.2.0
+scipy==1.17.1
